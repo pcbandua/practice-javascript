@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+
+<body>
+
+  <div id="container" style="width:100%; height:400px;">
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const chart = Highcharts.chart('container', {
+          chart: {
+            type: 'pie'
+          },
+          title: {
+            text: 'US Domestic Imports Consumption'
+          },
+          subtitle: {
+            text: "How much does the US consume"
+          },
+          xAxis: {
+            categories: ['Cars', 'Beef', 'Cell Phones']
+          },
+          yAxis: {
+            title: {
+              text: 'Fruit eaten'
+            }
+          },
+
+          // series: [{
+          //   name: 'US',
+          //   data: [15, 30, 55]
+          // },
+          // ]
+          series: [
+            {
+              name: 'Percentage',
+              colorByPoint: true,
+              data: [
+                {
+                  name: 'Cars',
+                  y: 40
+                },
+                {
+                  name: 'Beef',
+                  sliced: true,
+                  selected: true,
+                  y: 55
+                },
+                {
+                  name: 'Cellphones',
+                  y: 5
+                }
+              ]
+            }
+          ]
+        });
+      });
+    </script>
+  </div>
+
+
+  <div id="chart_2" style="width:100%; height:400px;">
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const chart = Highcharts.chart('chart_2', {
+          chart: {
+            type: 'pie'
+          },
+          title: {
+            text: 'Mexican Domestic Imports Consumption'
+          },
+          subtitle: {
+            text: "How much does the Mexico consume"
+          },
+          xAxis: {
+            categories: ['Cars', 'Beef', 'Cell Phones']
+          },
+          yAxis: {
+            title: {
+              text: 'Fruit eaten'
+            }
+          },
+          series: [{
+            name: 'Jane',
+            data: [30, 20, 50]
+          },]
+        });
+      });
+    </script>
+
+  </div>
+  //
+
+</body>
+
+</html>
